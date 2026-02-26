@@ -155,10 +155,35 @@ Gain observability into applications using structured logs and error tracking.
 
 ### 📚 Resources
 
-* Serilog — [https://serilog.net/](https://serilog.net/)
-* Logging in .NET (video) — [https://www.youtube.com/watch?v=4ECT1V8Z7g8](https://www.youtube.com/watch?v=4ECT1V8Z7g8)
-* Global Error Handling — [https://www.youtube.com/watch?v=1C3h0u4dGd0](https://www.youtube.com/watch?v=1C3h0u4dGd0)
+📌 Serilog Quick Start (Patrick God)
 
+🎥 Serilog 🚀 Logging in .NET 7 Made Simple & Fun
+➡️ https://www.youtube.com/watch?v=QjO2Jac1uQw
+
+✔ Step-by-step Serilog integration in a .NET API
+✔ Shows configuration, presets, sinks, HTTP request logging
+✔ Great for practical production-style setup
+
+📌 .NET Logging Explained — Nick Chapsas
+
+🎥 You are doing .NET logging wrong — Let’s fix it (includes Serilog explanations)
+➡️ https://www.youtube.com/watch?v=bnVfrd3lRv8
+
+✔ Covers structured logging concepts
+✔ Highlights common anti-patterns
+✔ Introduces Serilog as part of a logging strategy
+
+📌 Complementary Structured Logging Articles
+
+While not videos, these articles are excellent structured logging references (can be included in your notes):
+
+Structured Logging tutorial (Code Maze)
+https://code-maze.com/structured-logging-in-asp-net-core-with-serilog/
+
+Beginner-friendly Serilog guide with examples
+https://howik.com/serilog-tutorial-asp-net-core/
+
+(These help reinforce concepts you’ll see in video tutorials.)
 ---
 
 ### 🧩 Deliverables
