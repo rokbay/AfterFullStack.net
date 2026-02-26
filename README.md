@@ -301,4 +301,3 @@ Upon completion, you will be able to:
 
 ---
 
-If you want, I can also generate **visual tracker badges**, a **Notion study planner**, or convert this into a **project portfolio README with screenshots and progress sections**.
