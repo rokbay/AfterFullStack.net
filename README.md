@@ -1,328 +1,255 @@
 
-# 🚀 Production Engineering Roadmap — Fully Verified Resources
+````markdown
+# 🚀 Production Engineering & Systems Architecture Roadmap
 
 ## 🎯 Goal Definition
 
-This roadmap transforms you from building working applications to creating **production-ready backend systems** that are:
+This roadmap transforms you from building standard CRUD applications to engineering **high-performance, production-ready distributed systems**. It bridges the gap between traditional backend development (.NET/C#) and modern, event-driven AI application architecture.
 
-✔ Testable and maintainable
-✔ Secure and scalable
-✔ Observable and deployable
-✔ Built with industry standards
-
-Completing this plan prepares you for **real-world professional projects**, internships, and entry-level backend roles.
+By completing this track, you will be able to build systems that are:
+✔ Testable, observable, and maintainable
+✔ Secure across complex trust boundaries (JWT, CORS, OAuth)
+✔ Highly reactive and real-time (WebSockets, SignalR, SSE)
+✔ Capable of orchestrating AI APIs and local models seamlessly
 
 ---
 
 # 📂 Repository Structure
 
-```
+```text
 production-engineering/
 │
 ├── 01-testing/
-├── 02-authentication/
+├── 02-authentication-security/
 ├── 03-database-advanced/
-├── 04-observability/
+├── 04-observability-telemetry/
 ├── 05-api-best-practices/
-├── 06-devops/
-└── 07-system-design/
-```
+├── 06-real-time-networking/   <-- NEW
+├── 07-distributed-state/      <-- NEW
+├── 08-devops/
+└── 09-system-design/
+````
 
 Each module contains:
 
-* Learning resources
-* Code examples
-* Hands-on deliveries
-* Progress notes
+  * Learning resources (Documentation & Videos)
+  * Code examples
+  * Hands-on deliverables
+  * Progress notes
 
----
+-----
 
 ## 01 🧪 Testing (Unit + Integration)
 
 ### 🎯 Goal
 
-Implement automated tests with xUnit and Moq; build integration tests for APIs.
-
----
+Implement automated tests with xUnit and Moq; build integration tests for APIs to prevent regressions in production.
 
 ### 📘 Documentation
 
-* xUnit — [https://xunit.net/](https://xunit.net/)
-* Moq — [https://github.com/moq/moq](https://github.com/moq/moq)
-* Microsoft Learn – Unit Testing in .NET — [https://learn.microsoft.com/en-us/training/modules/unit-testing-dotnet/](https://learn.microsoft.com/en-us/training/modules/unit-testing-dotnet/)
-
----
-
-### 🎥 Verified Playlists & Videos
-
-✔ **ASP.NET Core Testing Playlist (Unit + Mock + Integration)**
-🔗 [https://www.youtube.com/playlist?list=PLpoLLRGmFCYy-V0MiOIhmzcH8MIRL5L4g](https://www.youtube.com/playlist?list=PLpoLLRGmFCYy-V0MiOIhmzcH8MIRL5L4g)
-
-Supplemental:
-
-* Moq Mocking in C# — [https://www.youtube.com/watch?v=IFN4-YrgBEI](https://www.youtube.com/watch?v=IFN4-YrgBEI)
-* Integration Testing Example — [https://www.youtube.com/watch?v=03y-i4nMou4](https://www.youtube.com/watch?v=03y-i4nMou4)
-* File Upload Integration Testing — [https://www.youtube.com/watch?v=0PXZMigt01A](https://www.youtube.com/watch?v=0PXZMigt01A)
-* General Integration Testing in C# — [https://www.youtube.com/watch?v=OPEC_7J1LOw](https://www.youtube.com/watch?v=OPEC_7J1LOw)
-
----
+  * xUnit — https://xunit.net/
+  * Moq — https://github.com/moq/moq
+  * Microsoft Learn – Unit Testing in .NET — https://learn.microsoft.com/en-us/training/modules/unit-testing-dotnet/
 
 ### 🧩 Deliverables
 
 Inside `01-testing/`:
 
-* 8+ unit tests covering logic and edge cases
-* Moq-based mocks for service layer
-* 2+ integration tests using `WebApplicationFactory`
-* A mini coverage report (optional)
+  * 8+ unit tests covering logic and edge cases.
+  * Moq-based mocks for the service layer (including mocking AI API responses).
+  * 2+ integration tests using `WebApplicationFactory`.
 
----
+-----
 
-## 02 🔐 Authentication & Authorization
+## 02 🔐 Authentication, Security & Trust Boundaries
 
 ### 🎯 Goal
 
-Implement secure authentication flows with JWT, Identity, and modern authorization.
-
----
+Implement secure, stateless authentication flows, understand token cryptography, and manage cross-origin network boundaries.
 
 ### 📘 Documentation
 
-* ASP.NET Core Identity — [https://learn.microsoft.com/en-us/aspnet/core/security/authentication/identity](https://learn.microsoft.com/en-us/aspnet/core/security/authentication/identity)
-* JWT Authentication — [https://learn.microsoft.com/en-us/aspnet/core/security/authentication/jwt](https://learn.microsoft.com/en-us/aspnet/core/security/authentication/jwt)
-* Auth0 Learn OAuth2 & OIDC — [https://auth0.com/learn](https://auth0.com/learn)
-
----
-
-### 🎥 Verified Playlists
-
-✔ **ASP.NET Core Authentication & Authorization Playlist**
-🔗 [https://www.youtube.com/playlist?list=PLOeFnOV9YBa4yaz-uIi5T4ZW3QQGHJQXi](https://www.youtube.com/playlist?list=PLOeFnOV9YBa4yaz-uIi5T4ZW3QQGHJQXi)
-
-Supplemental:
-
-* Alternative auth playlist — [https://www.youtube.com/playlist?list=PL1EYnCfHLswzAfUqc2ZmWJtv3qO9r5u08](https://www.youtube.com/playlist?list=PL1EYnCfHLswzAfUqc2ZmWJtv3qO9r5u08)
-* Arabic Auth Playlist — [https://www.youtube.com/playlist?list=PL62tSREI9C-eYNE1Pyw0yv1tETs5V8WGd](https://www.youtube.com/playlist?list=PL62tSREI9C-eYNE1Pyw0yv1tETs5V8WGd)
-* Auth Demo Video — [https://www.youtube.com/watch?v=SXSMU3KGxRc](https://www.youtube.com/watch?v=SXSMU3KGxRc)
-
----
+  * ASP.NET Core Identity — https://learn.microsoft.com/en-us/aspnet/core/security/authentication/identity
+  * JWT.io Debugger & Cryptography — https://jwt.io/
+  * Auth0: OAuth 2.0 and OIDC Explained — https://auth0.com/learn
+  * MDN Web Docs: CORS — https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS
 
 ### 🧩 Deliverables
 
-Inside `02-authentication/`:
+Inside `02-authentication-security/`:
 
-* Register/Login endpoints
-* JWT token issuance + validation
-* Role + policy-based authorization
-* Refresh token flow (advanced)
+  * Register/Login endpoints with JWT token issuance + asymmetric validation (RSA/HMAC).
+  * Role + policy-based authorization middleware.
+  * A documented CORS policy allowing a local frontend (`localhost:3000`) and local AI models (`localhost:1234`) while rejecting malicious origins.
 
----
+-----
 
-## 03 🗄 Advanced Database Concepts
+## 03 🗄 Advanced Database Concepts & CAP Theorem
 
 ### 🎯 Goal
 
-Improve database performance and understanding of data storage scalability.
-
----
+Understand the tradeoffs between strict relational integrity (ACID) and highly-available document stores (BASE), and master query optimization.
 
 ### 📚 Resources
 
-* Use The Index, Luke! — [https://use-the-index-luke.com](https://use-the-index-luke.com)
-* Brent Ozar SQL Indexing Basics — [https://www.youtube.com/watch?v=HfBq0b0Kj6A](https://www.youtube.com/watch?v=HfBq0b0Kj6A)
-* MongoDB University — [https://learn.mongodb.com/](https://learn.mongodb.com/)
-* Redis University — [https://university.redis.com/](https://university.redis.com/)
-
----
+  * The CAP Theorem Explained — https://www.ibm.com/topics/cap-theorem
+  * Use The Index, Luke\! — https://use-the-index-luke.com
+  * Redis University — https://university.redis.com/
 
 ### 🧩 Deliverables
 
 Inside `03-database-advanced/`:
 
-* Indexed query examples & execution plans
-* Redis caching implementation
-* Performance comparison benchmarks
+  * Indexed SQL query examples & execution plans.
+  * Architectural diagram comparing an ACID relational DB (SQL Server) to a BASE NoSQL DB (MongoDB/Convex) for high-frequency events.
+  * Redis in-memory caching implementation.
 
----
+-----
 
-## 04 📊 Logging, Monitoring & Error Handling
+## 04 📊 Observability, Logging & Telemetry
 
 ### 🎯 Goal
 
-Gain observability into applications using structured logs and error tracking.
-
----
+Gain real-time observability into systems using structured logs, separating high-value business actions from high-frequency telemetry.
 
 ### 📚 Resources
 
-📌 Serilog Quick Start (Patrick God)
-
-🎥 Serilog 🚀 Logging in .NET 7 Made Simple & Fun
-➡️ https://www.youtube.com/watch?v=QjO2Jac1uQw
-
-✔ Step-by-step Serilog integration in a .NET API
-✔ Shows configuration, presets, sinks, HTTP request logging
-✔ Great for practical production-style setup
-
-📌 .NET Logging Explained — Nick Chapsas
-
-🎥 You are doing .NET logging wrong — Let’s fix it (includes Serilog explanations)
-➡️ https://www.youtube.com/watch?v=bnVfrd3lRv8
-
-✔ Covers structured logging concepts
-✔ Highlights common anti-patterns
-✔ Introduces Serilog as part of a logging strategy
-
-📌 Complementary Structured Logging Articles
-
-While not videos, these articles are excellent structured logging references (can be included in your notes):
-
-Structured Logging tutorial (Code Maze)
-https://code-maze.com/structured-logging-in-asp-net-core-with-serilog/
-
-Beginner-friendly Serilog guide with examples
-https://howik.com/serilog-tutorial-asp-net-core/
-
-(These help reinforce concepts you’ll see in video tutorials.)
----
+  * Serilog Quick Start (Patrick God) — https://www.youtube.com/watch?v=QjO2Jac1uQw
+  * .NET Logging Explained (Nick Chapsas) — https://www.youtube.com/watch?v=bnVfrd3lRv8
 
 ### 🧩 Deliverables
 
-Inside `04-observability/`:
+Inside `04-observability-telemetry/`:
 
-* Structured logging with Serilog
-* Global exception middleware
-* Correlation ID propagation
+  * Structured logging integration via Serilog (`System.Text.Json` optimization).
+  * Global exception handling middleware.
+  * Implementation of a thread-safe, rolling in-memory log buffer (DevCon pattern) that prevents high-frequency telemetry from throttling the primary database.
 
----
+-----
 
 ## 05 📜 API Best Practices
 
 ### 🎯 Goal
 
-Design professional REST APIs that follow industry conventions.
-
----
+Design professional REST APIs that follow industry conventions for stability and backward compatibility.
 
 ### 📚 Resources
 
-* Microsoft REST API Guidelines — [https://github.com/microsoft/api-guidelines](https://github.com/microsoft/api-guidelines)
-* ASP.NET Core Web API Best Practices — [https://www.youtube.com/watch?v=5Wxyu4p4n6I](https://www.youtube.com/watch?v=5Wxyu4p4n6I)
-
----
+  * Microsoft REST API Guidelines — https://github.com/microsoft/api-guidelines
 
 ### 🧩 Deliverables
 
 Inside `05-api-best-practices/`:
 
-* API versioning (v1 & v2)
-* Pagination & filtering
-* Swagger (OpenAPI) documentation
+  * API versioning (v1 & v2).
+  * Pagination & filtering mechanisms.
+  * Swagger (OpenAPI) documentation.
 
----
+-----
 
-## 06 🛠 Deployment & CI/CD
-
-### 🎯 Goal
-
-Automate workflows for building, testing, and deploying applications.
-
----
-
-### 📚 Resources
-
-* Git Documentation — [https://git-scm.com/doc](https://git-scm.com/doc)
-* TechWorld with Nana Docker Full Course — [https://www.youtube.com/watch?v=3c-iBn73dDE](https://www.youtube.com/watch?v=3c-iBn73dDE)
-* GitHub Actions Crash Course — [https://www.youtube.com/watch?v=R8_veQiYBjI](https://www.youtube.com/watch?v=R8_veQiYBjI)
-* Deploy .NET to Azure Learn Module — [https://learn.microsoft.com/en-us/training/modules/publish-app-service-dotnet/](https://learn.microsoft.com/en-us/training/modules/publish-app-service-dotnet/)
-
----
-
-### 🧩 Deliverables
-
-Inside `06-devops/`:
-
-* Dockerfile + docker-compose
-* Automated GitHub Actions workflow
-* Deployment guide to Azure App Service
-
----
-
-## 07 🧠 System Design Essentials
+## 06 ⚡ Real-Time Networking & Streams
 
 ### 🎯 Goal
 
-Understand scalable backend architecture and distributed systems principles.
-
----
+Move beyond standard REST request/response loops by implementing persistent two-way communication channels and server-to-client streaming.
 
 ### 📚 Resources
 
-* System Design Primer — [https://github.com/donnemartin/system-design-primer](https://github.com/donnemartin/system-design-primer)
-* ByteByteGo System Design Videos — [https://www.youtube.com/c/ByteByteGo](https://www.youtube.com/c/ByteByteGo)
-* Hussein Nasser Dist. Systems Playlist — [https://www.youtube.com/playlist?list=PLQnljOFTspQUNnO4p00ua_C5ryKpV7XQp](https://www.youtube.com/playlist?list=PLQnljOFTspQUNnO4p00ua_C5ryKpV7XQp)
-
----
+  * Intro to SignalR — https://learn.microsoft.com/en-us/aspnet/core/signalr/introduction
+  * WebSockets vs Server-Sent Events (SSE) — https://www.google.com/search?q=https://ably.com/topic/websockets-vs-sse
 
 ### 🧩 Deliverables
 
-Inside `07-system-design/`:
+Inside `06-real-time-networking/`:
 
-* URL shortener architecture
-* Scalable chat system design
-* E-commerce platform tradeoff analysis
+  * A working C\# SignalR Hub that broadcasts state changes to connected clients.
+  * An SSE (Server-Sent Events) endpoint that streams text chunks (simulating AI generation).
+  * Connection health-check and automated reconnection fallback strategy.
 
-Each includes:
+-----
 
-* Requirements
-* Bottlenecks
-* Scaling strategy
-* Tradeoff justification
+## 07 🌐 Distributed State & UI Reactivity
 
----
+### 🎯 Goal
 
-# 📅 12-Week Execution Plan
+Manage data synchronization between a client UI and a remote database without blocking the browser's main thread.
 
-### Weeks 1–2 → Testing
+### 📚 Resources
 
-Implement automated tests + coverage.
+  * React Optimistic UI Patterns — https://react.dev/reference/react/useOptimistic
 
-### Weeks 3–4 → Authentication
+### 🧩 Deliverables
 
-Secure API with Identity + JWT.
+Inside `07-distributed-state/`:
 
-### Weeks 5–6 → Database Optimization
+  * A React/Next.js component implementing `Optimistic UI` updates for a high-frequency action (e.g., drag-and-drop).
+  * Separation of state context: mapping what data belongs in Local React State vs. Remote Database State (Convex).
 
-Indexing + caching demonstrations.
+-----
 
-### Weeks 7–8 → Observability
+## 08 🛠 Deployment & CI/CD
 
-Add logging + global error handling.
+### 🎯 Goal
 
-### Weeks 9–10 → API Maturity
+Automate workflows for building, testing, and deploying distributed applications.
 
-Versioning + filtering + docs.
+### 📚 Resources
 
-### Week 11 → DevOps
+  * TechWorld with Nana Docker Full Course — https://www.youtube.com/watch?v=3c-iBn73dDE
+  * GitHub Actions Crash Course — https://www.youtube.com/watch?v=R8\_veQiYBjI
 
-Docker + CI/CD + Azure deployment.
+### 🧩 Deliverables
 
-### Week 12 → System Design
+Inside `08-devops/`:
 
-Document 3 scalable architectures.
+  * Dockerfile + `docker-compose.yml` orchestrating your API and Redis cache.
+  * Automated GitHub Actions workflow for CI testing.
+  * Deployment guide for Azure App Service or AWS.
 
----
+-----
+
+## 09 🧠 Advanced System Design
+
+### 🎯 Goal
+
+Understand scalable backend architecture, multi-agent AI orchestration, and system tradeoffs.
+
+### 📚 Resources
+
+  * System Design Primer — https://github.com/donnemartin/system-design-primer
+  * ByteByteGo System Design Videos — https://www.youtube.com/c/ByteByteGo
+
+### 🧩 Deliverables
+
+Inside `09-system-design/`:
+
+  * Scalable Chat/WebSocket system design document.
+  * AI Orchestration Blueprint (Mapping cloud fallback strategies to local model endpoints).
+  * Tradeoff analysis for a complex distributed system (Requirements, Bottlenecks, Scaling Strategy).
+
+-----
+
+# 📅 14-Week Execution Plan
+
+  * **Weeks 1–2 → Testing:** Automated tests & Mocking frameworks.
+  * **Weeks 3–4 → Auth & Security:** JWTs, CORS, and trust boundaries.
+  * **Weeks 5–6 → Databases & CAP:** SQL Indexing, Redis, ACID vs. BASE.
+  * **Weeks 7–8 → Observability:** Serilog, telemetry separation, rolling buffers.
+  * **Week 9 → API Maturity:** REST best practices, OpenAPI, Versioning.
+  * **Weeks 10–11 → Real-Time & State:** SignalR, SSE, Optimistic UI.
+  * **Week 12 → DevOps:** Docker, GitHub Actions, Cloud Deployment.
+  * **Weeks 13–14 → System Design:** Architecture documentation and tradeoff analysis.
+
+-----
 
 # 🏁 Final Competencies
 
 Upon completion, you will be able to:
+✔ Architect and build production-ready, distributed backend systems.
+✔ Secure APIs across complex network boundaries and local/cloud environments.
+✔ Manage real-time data synchronization between the server and the DOM.
+✔ Implement safe telemetry without impacting system performance.
+✔ Orchestrate SDD (Spec-Driven Development) pipelines and AI architectures.
 
-✔ Build production-ready backend APIs
-✔ Secure them with best practices
-✔ Monitor and observe behavior
-✔ Optimize performance
-✔ Deploy automatically
-✔ Explain core system design decisions
-
----
-
+```
+```
