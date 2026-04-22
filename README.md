@@ -84,26 +84,22 @@ Inside `02-authentication-security/`:
 
 -----
 
-## 03 🗄 Advanced Database Concepts & CAP Theorem
-
+## 03 🗄 Advanced Database Concepts & NoSQL (MongoDB)
 ### 🎯 Goal
-
-Understand the tradeoffs between strict relational integrity (ACID) and highly-available document stores (BASE), and master query optimization.
+Understand the tradeoffs between strict relational integrity (ACID) and highly-available document stores (BASE), and master both SQL and NoSQL implementations.
 
 ### 📚 Resources
-
-  * The CAP Theorem Explained — https://www.ibm.com/topics/cap-theorem
-  * Use The Index, Luke\! — https://use-the-index-luke.com
-  * Redis University — https://university.redis.com/
+* The CAP Theorem Explained — https://www.ibm.com/topics/cap-theorem
+* MongoDB University (Free Official Courses) — https://learn.mongodb.com/
+* Use The Index, Luke! (SQL Indexing) — https://use-the-index-luke.com
+* Redis University — https://university.redis.com/
 
 ### 🧩 Deliverables
-
 Inside `03-database-advanced/`:
-
-  * Indexed SQL query examples & execution plans.
-  * Architectural diagram comparing an ACID relational DB (SQL Server) to a BASE NoSQL DB (MongoDB/Convex) for high-frequency events.
-  * Redis in-memory caching implementation.
-
+* Indexed SQL query examples & execution plans.
+* A working MongoDB implementation demonstrating document-based data modeling (knowing when to *embed* data vs. when to *reference* data).
+* Architectural diagram comparing an ACID relational DB (SQL Server) to a BASE NoSQL DB (MongoDB/Convex) for high-frequency events.
+* Redis in-memory caching implementation.
 -----
 
 ## 04 📊 Observability, Logging & Telemetry
